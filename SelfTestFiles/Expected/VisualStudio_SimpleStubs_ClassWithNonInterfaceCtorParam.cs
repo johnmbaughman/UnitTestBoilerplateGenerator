@@ -15,7 +15,6 @@ namespace UnitTestBoilerplate.SelfTest.Cases
 			this.stubSomeClass = new StubSomeClass();
 		}
 
-
 		private ClassWithNonInterfaceCtorParam CreateClassWithNonInterfaceCtorParam()
 		{
 			return new ClassWithNonInterfaceCtorParam(
@@ -26,13 +25,12 @@ namespace UnitTestBoilerplate.SelfTest.Cases
 		public void TestMethod1()
 		{
 			// Arrange
-			var unitUnderTest = CreateClassWithNonInterfaceCtorParam();
+			var unitUnderTest = this.CreateClassWithNonInterfaceCtorParam();
 
 			// Act
 
 			// Assert
 			Assert.Fail();
 		}
-
 	}
 }

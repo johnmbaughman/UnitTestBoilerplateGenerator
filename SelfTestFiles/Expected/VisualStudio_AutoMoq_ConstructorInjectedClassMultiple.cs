@@ -9,7 +9,6 @@ namespace UnitTestBoilerplate.SelfTest.Cases
 	[TestClass]
 	public class ConstructorInjectedClassMultipleTests
 	{
-
 		[TestMethod]
 		public void TestMethod1()
 		{
@@ -22,6 +21,5 @@ namespace UnitTestBoilerplate.SelfTest.Cases
 			// Assert
 			Assert.Fail();
 		}
-
 	}
 }

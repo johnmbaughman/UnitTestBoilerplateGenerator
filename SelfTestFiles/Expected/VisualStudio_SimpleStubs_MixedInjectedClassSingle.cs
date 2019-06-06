@@ -17,7 +17,6 @@ namespace UnitTestBoilerplate.SelfTest.Cases
 			this.stubSomeInterface = new StubISomeInterface();
 		}
 
-
 		private MixedInjectedClassSingle CreateMixedInjectedClassSingle()
 		{
 			return new MixedInjectedClassSingle(
@@ -31,13 +30,12 @@ namespace UnitTestBoilerplate.SelfTest.Cases
 		public void TestMethod1()
 		{
 			// Arrange
-			var unitUnderTest = CreateMixedInjectedClassSingle();
+			var unitUnderTest = this.CreateMixedInjectedClassSingle();
 
 			// Act
 
 			// Assert
 			Assert.Fail();
 		}
-
 	}
 }

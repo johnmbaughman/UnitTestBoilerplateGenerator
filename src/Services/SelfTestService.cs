@@ -63,7 +63,7 @@ namespace UnitTestBoilerplate.Services
 					}
 
 					// Delete folder if it existed but was not added to project.
-					string projectFolder = Path.GetDirectoryName(project.FileName);
+					string projectFolder = Path.GetDirectoryName(project.FullName);
 					string casesFolder = Path.Combine(projectFolder, "Cases");
 
 					if (Directory.Exists(casesFolder))
@@ -117,6 +117,12 @@ namespace UnitTestBoilerplate.Services
 				PreferredMockFramework = null
 			};
 
+			var noMockFrameworkSettings = new MockBoilerplateSettings
+			{
+				PreferredTestFramework = null,
+				PreferredMockFramework = MockFrameworks.Get(MockFrameworks.NoneName)
+			};
+
 			var vsMoqSettings = new MockBoilerplateSettings
 			{
 				PreferredTestFramework = TestFrameworks.Get(TestFrameworks.VisualStudioName),
@@ -132,12 +138,13 @@ namespace UnitTestBoilerplate.Services
 			var testList = new List<SelfTestDetectionTest>
 			{
 				new SelfTestDetectionTest("AutoMoqTestCases", defaultSettings, TestFrameworks.VisualStudioName, MockFrameworks.AutoMoqName),
+				new SelfTestDetectionTest("FakeItEasyTestCases", defaultSettings, TestFrameworks.VisualStudioName, MockFrameworks.FakeItEasyName),
 				new SelfTestDetectionTest("NetCoreMoqTestCases", defaultSettings, TestFrameworks.VisualStudioName, MockFrameworks.MoqName),
 				new SelfTestDetectionTest("NetCoreNSubstituteTestCases", defaultSettings, TestFrameworks.VisualStudioName, MockFrameworks.NSubstituteName),
 				new SelfTestDetectionTest("NetCoreNUnitTestCases", defaultSettings, TestFrameworks.NUnitName, MockFrameworks.MoqName),
 				new SelfTestDetectionTest("NetCoreSimpleStubsTestCases", defaultSettings, TestFrameworks.VisualStudioName, MockFrameworks.SimpleStubsName),
 				new SelfTestDetectionTest("NetCoreVSRhinoMocksTestCases", defaultSettings, TestFrameworks.VisualStudioName, MockFrameworks.RhinoMocksName),
-				new SelfTestDetectionTest("NoFrameworkTestCases", defaultSettings, TestFrameworks.VisualStudioName, MockFrameworks.MoqName),
+				new SelfTestDetectionTest("NoFrameworkTestCases", defaultSettings, TestFrameworks.VisualStudioName, MockFrameworks.NoneName),
 				new SelfTestDetectionTest("NoFrameworkTestCases", nunitNSubSettings, TestFrameworks.NUnitName, MockFrameworks.NSubstituteName),
 				new SelfTestDetectionTest("NSubstituteTestCases", defaultSettings, TestFrameworks.VisualStudioName, MockFrameworks.NSubstituteName),
 				new SelfTestDetectionTest("NUnitTestCases", defaultSettings, TestFrameworks.NUnitName, MockFrameworks.MoqName),
@@ -145,6 +152,7 @@ namespace UnitTestBoilerplate.Services
 				new SelfTestDetectionTest("SimpleStubsTestCases", defaultSettings, TestFrameworks.VisualStudioName, MockFrameworks.SimpleStubsName),
 				new SelfTestDetectionTest("VSRhinoMocksTestCases", defaultSettings, TestFrameworks.VisualStudioName, MockFrameworks.RhinoMocksName),
 				new SelfTestDetectionTest("VSTestCases", defaultSettings, TestFrameworks.VisualStudioName, MockFrameworks.MoqName),
+				new SelfTestDetectionTest("VSTestCases", noMockFrameworkSettings, TestFrameworks.VisualStudioName, MockFrameworks.NoneName),
 				new SelfTestDetectionTest("XUnitMoqTestCases", defaultSettings, TestFrameworks.XUnitName, MockFrameworks.MoqName),
 				new SelfTestDetectionTest("MultipleFrameworkTestCases", defaultSettings, TestFrameworks.NUnitName, MockFrameworks.NSubstituteName),
 				new SelfTestDetectionTest("MultipleFrameworkTestCases", vsMoqSettings, TestFrameworks.VisualStudioName, MockFrameworks.MoqName),
@@ -176,32 +184,6 @@ namespace UnitTestBoilerplate.Services
 					result.SucceededCount++;
 				}
 			}
-
-			//foreach (Project testProject in targetProjects)
-			//{
-			//	result.TotalCount++;
-
-			//	TestFramework actualTestFramework = frameworkPickerService.FindTestFramework(testProject.FileName);
-			//	MockFramework actualMockFramework = frameworkPickerService.FindMockFramework(testProject.FileName);
-
-			//	SelfTestDetectionResult expectedDetectionResult;
-			//	if (!ExpectedDetectionResults.TryGetValue(testProject.Name, out expectedDetectionResult))
-			//	{
-			//		failures.Add("Could not find expected detection results for project " + testProject.Name);
-			//	}
-			//	else if (expectedDetectionResult.TestFramework != actualTestFramework.Name)
-			//	{
-			//		failures.Add($"Expected {expectedDetectionResult.TestFramework} test framework for {testProject.Name} but got {actualTestFramework.Name}");
-			//	}
-			//	else if (expectedDetectionResult.MockFramework != actualMockFramework.Name)
-			//	{
-			//		failures.Add($"Expected {expectedDetectionResult.MockFramework} mock framework for {testProject.Name} but got {actualMockFramework.Name}");
-			//	}
-			//	else
-			//	{
-			//		result.SucceededCount++;
-			//	}
-			//}
 
 			result.Failures = failures;
 

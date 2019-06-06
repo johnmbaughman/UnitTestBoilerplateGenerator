@@ -19,7 +19,6 @@ namespace UnitTestBoilerplate.SelfTest.Cases
 			this.subSomeOtherInterface = Substitute.For<ISomeOtherInterface>();
 		}
 
-
 		private SomeService CreateService()
 		{
 			return new SomeService(
@@ -31,7 +30,7 @@ namespace UnitTestBoilerplate.SelfTest.Cases
 		public void AddNumbers_StateUnderTest_ExpectedBehavior()
 		{
 			// Arrange
-			var unitUnderTest = CreateService();
+			var unitUnderTest = this.CreateService();
 			int a = TODO;
 			int b = TODO;
 

@@ -19,7 +19,6 @@ namespace UnitTestBoilerplate.SelfTest.Cases
 			this.stubSomeOtherInterface = new StubISomeOtherInterface();
 		}
 
-
 		private ClassWithMethods CreateClassWithMethods()
 		{
 			return new ClassWithMethods(
@@ -31,7 +30,7 @@ namespace UnitTestBoilerplate.SelfTest.Cases
 		public async Task GetBoolTaskAsync_StateUnderTest_ExpectedBehavior()
 		{
 			// Arrange
-			var unitUnderTest = CreateClassWithMethods();
+			var unitUnderTest = this.CreateClassWithMethods();
 			IInterface3 interface3 = TODO;
 			DateTime time = TODO;
 
@@ -48,7 +47,7 @@ namespace UnitTestBoilerplate.SelfTest.Cases
 		public async Task GetBoolTaskNoAsync_StateUnderTest_ExpectedBehavior()
 		{
 			// Arrange
-			var unitUnderTest = CreateClassWithMethods();
+			var unitUnderTest = this.CreateClassWithMethods();
 			IInterface3 interface3 = TODO;
 			DateTime time = TODO;
 
@@ -65,7 +64,7 @@ namespace UnitTestBoilerplate.SelfTest.Cases
 		public async Task GetTaskNoAsync_StateUnderTest_ExpectedBehavior()
 		{
 			// Arrange
-			var unitUnderTest = CreateClassWithMethods();
+			var unitUnderTest = this.CreateClassWithMethods();
 			IInterface3 interface3 = TODO;
 			DateTime time = TODO;
 
@@ -82,7 +81,7 @@ namespace UnitTestBoilerplate.SelfTest.Cases
 		public void GetString_StateUnderTest_ExpectedBehavior()
 		{
 			// Arrange
-			var unitUnderTest = CreateClassWithMethods();
+			var unitUnderTest = this.CreateClassWithMethods();
 
 			// Act
 			var result = unitUnderTest.GetString();
@@ -95,7 +94,7 @@ namespace UnitTestBoilerplate.SelfTest.Cases
 		public void GetIntMultipleSignatures_StateUnderTest_ExpectedBehavior()
 		{
 			// Arrange
-			var unitUnderTest = CreateClassWithMethods();
+			var unitUnderTest = this.CreateClassWithMethods();
 			string bla = TODO;
 
 			// Act
@@ -110,7 +109,7 @@ namespace UnitTestBoilerplate.SelfTest.Cases
 		public void GetIntMultipleSignatures_StateUnderTest_ExpectedBehavior1()
 		{
 			// Arrange
-			var unitUnderTest = CreateClassWithMethods();
+			var unitUnderTest = this.CreateClassWithMethods();
 			IInterface4 interface4 = TODO;
 
 			// Act
@@ -125,7 +124,7 @@ namespace UnitTestBoilerplate.SelfTest.Cases
 		public void GetOut_StateUnderTest_ExpectedBehavior()
 		{
 			// Arrange
-			var unitUnderTest = CreateClassWithMethods();
+			var unitUnderTest = this.CreateClassWithMethods();
 			bool fufu = TODO;
 			int bubu = TODO;
 
@@ -142,7 +141,7 @@ namespace UnitTestBoilerplate.SelfTest.Cases
 		public void DoRef_StateUnderTest_ExpectedBehavior()
 		{
 			// Arrange
-			var unitUnderTest = CreateClassWithMethods();
+			var unitUnderTest = this.CreateClassWithMethods();
 			ClassWithMethods refArg = TODO;
 
 			// Act
@@ -157,7 +156,7 @@ namespace UnitTestBoilerplate.SelfTest.Cases
 		public void DoEnum_StateUnderTest_ExpectedBehavior()
 		{
 			// Arrange
-			var unitUnderTest = CreateClassWithMethods();
+			var unitUnderTest = this.CreateClassWithMethods();
 			Cucu cucuENum = TODO;
 
 			// Act
@@ -172,7 +171,7 @@ namespace UnitTestBoilerplate.SelfTest.Cases
 		public async Task GetParams_StateUnderTest_ExpectedBehavior()
 		{
 			// Arrange
-			var unitUnderTest = CreateClassWithMethods();
+			var unitUnderTest = this.CreateClassWithMethods();
 			string[] values = TODO;
 
 			// Act
@@ -187,7 +186,7 @@ namespace UnitTestBoilerplate.SelfTest.Cases
 		public async Task GetParams2D_StateUnderTest_ExpectedBehavior()
 		{
 			// Arrange
-			var unitUnderTest = CreateClassWithMethods();
+			var unitUnderTest = this.CreateClassWithMethods();
 			DateTime[][] values = TODO;
 
 			// Act
@@ -202,7 +201,7 @@ namespace UnitTestBoilerplate.SelfTest.Cases
 		public async Task GetParamsClass_StateUnderTest_ExpectedBehavior()
 		{
 			// Arrange
-			var unitUnderTest = CreateClassWithMethods();
+			var unitUnderTest = this.CreateClassWithMethods();
 			ClassWithMethods[] values = TODO;
 
 			// Act
@@ -217,7 +216,7 @@ namespace UnitTestBoilerplate.SelfTest.Cases
 		public async Task GetParamsClass2D_StateUnderTest_ExpectedBehavior()
 		{
 			// Arrange
-			var unitUnderTest = CreateClassWithMethods();
+			var unitUnderTest = this.CreateClassWithMethods();
 			ClassWithMethods[][] values = TODO;
 
 			// Act
@@ -232,7 +231,7 @@ namespace UnitTestBoilerplate.SelfTest.Cases
 		public async Task GetWithClass4D_StateUnderTest_ExpectedBehavior()
 		{
 			// Arrange
-			var unitUnderTest = CreateClassWithMethods();
+			var unitUnderTest = this.CreateClassWithMethods();
 			ClassWithMethods[][][][] values = TODO;
 
 			// Act
@@ -247,7 +246,7 @@ namespace UnitTestBoilerplate.SelfTest.Cases
 		public void MethodWithNullableArgument_StateUnderTest_ExpectedBehavior()
 		{
 			// Arrange
-			var unitUnderTest = CreateClassWithMethods();
+			var unitUnderTest = this.CreateClassWithMethods();
 			int? argument = TODO;
 
 			// Act
@@ -262,7 +261,7 @@ namespace UnitTestBoilerplate.SelfTest.Cases
 		public void MethodWithNamespaceQualifiedArgument_StateUnderTest_ExpectedBehavior()
 		{
 			// Arrange
-			var unitUnderTest = CreateClassWithMethods();
+			var unitUnderTest = this.CreateClassWithMethods();
 			Classes.IInterface3 myInterface = TODO;
 
 			// Act

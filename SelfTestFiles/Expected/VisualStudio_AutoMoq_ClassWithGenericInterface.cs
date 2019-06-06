@@ -10,7 +10,6 @@ namespace UnitTestBoilerplate.SelfTest.Cases
 	[TestClass]
 	public class ClassWithGenericInterfaceTests
 	{
-
 		[TestMethod]
 		public void TestMethod1()
 		{
@@ -23,6 +22,5 @@ namespace UnitTestBoilerplate.SelfTest.Cases
 			// Assert
 			Assert.Fail();
 		}
-
 	}
 }

@@ -8,7 +8,6 @@ namespace UnitTestBoilerplate.SelfTest.Cases
 	[TestClass]
 	public class NotInjectedClassTests
 	{
-
 		[TestMethod]
 		public void TestMethod1()
 		{
@@ -21,6 +20,5 @@ namespace UnitTestBoilerplate.SelfTest.Cases
 			// Assert
 			Assert.Fail();
 		}
-
 	}
 }

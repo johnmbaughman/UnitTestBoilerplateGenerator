@@ -15,7 +15,6 @@ namespace UnitTestBoilerplate.SelfTest.Cases
 
 		}
 
-
 		private NotInjectedClass CreateNotInjectedClass()
 		{
 			return new NotInjectedClass();
@@ -25,13 +24,12 @@ namespace UnitTestBoilerplate.SelfTest.Cases
 		public void TestMethod1()
 		{
 			// Arrange
-			var unitUnderTest = CreateNotInjectedClass();
+			var unitUnderTest = this.CreateNotInjectedClass();
 
 			// Act
 
 			// Assert
 			Assert.Fail();
 		}
-
 	}
 }

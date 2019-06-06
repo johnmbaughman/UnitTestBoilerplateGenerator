@@ -5,6 +5,32 @@
 
 # Changelog
 
+## 1.10.5
+**2019-06-01**
+- Added ability to choose no mock framework.
+- Fixed crash when trying to revert a template to default.
+
+## 1.10.0
+**2019-04-25**
+- Added support for FakeItEasy mock framework.
+
+## 1.9.20
+**2019-02-05**
+- Fixed error with SQL Database projects.
+
+## 1.9.17
+**2019-02-05**
+- Fixed installation issues with some versions of Visual Studio.
+
+## 1.9.15
+**2018-12-18**
+- Added support for Visual Studio 2019.
+
+## 1.9.13
+**2018-12-06**
+- Generated tests in xUnit now use Assert.True(false) instead of the non-existent Assert.Fail() .
+- Removed extra newline after placeholder test.
+
 ## 1.9.12
 **2018-11-18**
 - Fixed xUnit detection on .NET Framework projects.
